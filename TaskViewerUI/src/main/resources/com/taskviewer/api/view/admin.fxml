@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="857.0" prefWidth="1081.0" style="-fx-background-color: #ffe414;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskviewer.api.view.AdminController">
+   <children>
+      <TableView fx:id="tasksTableView" layoutX="14.0" layoutY="53.0" prefHeight="588.0" prefWidth="446.0" style="-fx-background-color: #101c24;">
+        <columns>
+          <TableColumn fx:id="titleTableColumn" prefWidth="105.0" text="Наименование" />
+          <TableColumn fx:id="statusTableColumn" prefWidth="108.0" text="Статус" />
+            <TableColumn fx:id="priorityTableColumn" prefWidth="103.0" text="Приоритет" />
+            <TableColumn fx:id="usernameTableColumn" prefWidth="129.0" text="Назначено на" />
+        </columns>
+      </TableView>
+      <Label layoutX="23.0" layoutY="18.0" text="Задачи:" textFill="#101c24">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="duplicateTaskButton" layoutX="350.0" layoutY="18.0" mnemonicParsing="false" style="-fx-background-color: #101c24;" text="Дублировать" textFill="#26cd00">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="477.0" prefHeight="857.0" prefWidth="605.0" style="-fx-background-color: #101c24;">
+         <children>
+            <Label layoutX="18.0" layoutY="57.0" text="Наименование:" textFill="#ffe414">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="titleTextField" layoutX="154.0" layoutY="57.0" prefHeight="25.0" prefWidth="436.0" style="-fx-background-color: #ffe414;" />
+            <Label fx:id="usernameLabel" layoutX="489.0" layoutY="17.0" text="Никнейм" textFill="#ffe414">
+               <font>
+                  <Font name="System Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="taskNumberLabel" layoutX="18.0" layoutY="17.0" text="Задача №" textFill="#ffe414">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="94.0" text="Описание:" textFill="#ffe414">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="aboutTextArea" layoutX="154.0" layoutY="94.0" prefHeight="165.0" prefWidth="436.0" style="-fx-background-color: #ffe414;" />
+            <Label layoutX="18.0" layoutY="269.0" text="Приоритет:" textFill="#ffe414">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="priorityTextField" layoutX="154.0" layoutY="269.0" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #ffe414;" />
+            <Label layoutX="261.0" layoutY="269.0" text="Статус:" textFill="#ffe414">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="statusTextField" layoutX="347.0" layoutY="269.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-color: #ffe414;" />
+            <Label layoutX="18.0" layoutY="308.0" text="Назначено на:" textFill="#ffe414">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTextField" layoutX="154.0" layoutY="308.0" prefHeight="25.0" prefWidth="436.0" style="-fx-background-color: #ffe414;" />
+            <Label layoutX="18.0" layoutY="342.0" text="Срок выполнения:" textFill="#ffe414">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dueDatePicker" layoutX="186.0" layoutY="342.0" prefHeight="25.0" prefWidth="404.0" style="-fx-background-color: #ffe414;" />
+            <Label layoutX="18.0" layoutY="377.0" textFill="#ffe414">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="createTaskButton" layoutX="20.0" layoutY="377.0" mnemonicParsing="false" style="-fx-background-color: #ffe414;" text="Создать задачу" textFill="#101c24">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="updateTaskButton" layoutX="158.0" layoutY="377.0" mnemonicParsing="false" style="-fx-background-color: #ffe414;" text="Обновить" textFill="#101c24">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeTaskButton" layoutX="463.0" layoutY="377.0" mnemonicParsing="false" style="-fx-background-color: #ffe414;" text="Закрыть задачу" textFill="#101c24">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="taskNumberLabel1" layoutX="22.0" layoutY="485.0" text="Комментарии:" textFill="#ffe414">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ListView fx:id="commentsListView" layoutX="18.0" layoutY="569.0" prefHeight="173.0" prefWidth="568.0" style="-fx-background-color: #ffe414;" />
+            <TextArea fx:id="writeCommentTextArea" layoutX="18.0" layoutY="751.0" prefHeight="56.0" prefWidth="568.0" style="-fx-background-color: #ffe414;" />
+            <Button fx:id="addCommentButton" layoutX="18.0" layoutY="816.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #ffe414;" text="Добавить комментарий" textFill="#101c24">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="updateCommentButton" layoutX="220.0" layoutY="816.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #ffe414;" text="Обновить" textFill="#101c24">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteCommentButton" layoutX="317.0" layoutY="816.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: #ffe414;" text="Удалить" textFill="#101c24">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="23.0" layoutY="511.0" text="Сортировать по:" textFill="#ffe414">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="537.0" text="Никнейму" textFill="#ffe414">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="295.0" layoutY="537.0" text="Задаче" textFill="#ffe414">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchCommentByUsernameTextField" layoutX="102.0" layoutY="537.0" prefHeight="25.0" prefWidth="177.0" style="-fx-background-color: #ffe414;" />
+            <TextField fx:id="searchCommentByTaskTextField" layoutX="351.0" layoutY="537.0" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #ffe414;" />
+            <TextField fx:id="assignTaskTextField" layoutX="154.0" layoutY="443.0" prefHeight="25.0" prefWidth="436.0" style="-fx-background-color: #ffe414;" />
+            <Button fx:id="assignTaskButton" layoutX="20.0" layoutY="440.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #ffe414;" text="Переназначить" textFill="#101c24">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="deleteTaskButton" layoutX="270.0" layoutY="18.0" mnemonicParsing="false" style="-fx-background-color: #101c24;" text="Удалить" textFill="#dd0808">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="192.0" layoutY="647.0" text="Поиск по:" textFill="#101c24">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="203.0" layoutY="676.0" style="-fx-background-color: #101c24;" />
+      <Button fx:id="weeklyTasksButton" layoutX="108.0" layoutY="18.0" mnemonicParsing="false" style="-fx-background-color: #101c24;" text="7 дней" textFill="#098ddb">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="weeklyTaskByNicknameIdTextField" layoutX="203.0" layoutY="815.0" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #101c24;" />
+      <TextField layoutX="203.0" layoutY="708.0" style="-fx-background-color: #101c24;" />
+      <TextField layoutX="203.0" layoutY="739.0" style="-fx-background-color: #101c24;" />
+      <TextField layoutX="203.0" layoutY="770.0" style="-fx-background-color: #101c24;" />
+      <Label layoutX="117.0" layoutY="676.0" text="Никнейму" textFill="#101c24">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="708.0" text="Наименованию" textFill="#101c24">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="739.0" text="Статусу" textFill="#101c24">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="770.0" text="Приоритету" textFill="#101c24">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="814.0" text="7 дней (id никнейма)" textFill="#101c24">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
